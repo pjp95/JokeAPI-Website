@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokeAPI</title>
+</head>
+<body>
+    <main>
+        <h1>Want to Hear a Joke?</h1>
+        <h3>Choose what category of joke you want to hear:</h3>
+        <form action="/submit" method="POST">
+            <label><input type="radio" name="category" value="Programming" required>Programming</label><br>
+            <label><input type="radio" name="category" value="Dark" required>Dark</label><br>
+            <label><input type="radio" name="category" value="Pun" required>Pun</label><br>
+            <label><input type="radio" name="category" value="Spooky" required>Spooky</label><br>
+            <label><input type="radio" name="category" value="Christmas" required>Christmas</label><br>
+            <label><input type="radio" name="category" value="Any" required>Any</label><br>
+            <button type="submit">Get Joke</button>
+        </form>
+        <% if (locals.joke) { %>
+            <p id="joke"><%=joke%></p>
+        <%}%>
+    </main>
+</body>
+</html>
